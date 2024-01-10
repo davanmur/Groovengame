@@ -1,0 +1,698 @@
+@font-face {
+    font-family: "joystix-monospace";
+    src: url("fonts/joystix_monospace.otf")
+}
+
+* {
+    font-family: "joystix-monospace", monospace;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+input {
+    background-color: rgb(217, 217, 217);
+}
+
+input:focus {
+    outline-color: black;
+}
+
+.btn {
+    border: none;
+}
+
+.btn-primary {
+    background-color: rgb(184, 238, 255);
+    color: rgb(18, 36, 30);
+}
+
+.btn-primary:hover {
+    background-color: rgba(184, 238, 255, 0.589);
+}
+
+.btn-secondary {
+    background-color: rgb(197, 139, 255);
+    color: rgb(18, 36, 30);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(197, 139, 255, 0.342);
+}
+
+#main-row {
+    height: 100vh;
+}
+
+#letters-guessed {
+    padding-bottom: 15px;
+}
+
+#play-game-letters-guessed {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#current-word {
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+#game-section {
+    background-color: rgb(9, 0, 35);
+    color: rgb(183, 236, 253);
+    padding: 7%;
+}
+
+#game-section hr {
+    height: 2px;
+    background: white;
+    opacity: 1;
+    width: 33%;
+}
+
+#game-section h1 {
+    color: rgb(255, 255, 255);
+    font-size: 40pt;
+}
+
+#game-section p {
+    color: white;
+    font-size: 1em;
+}
+
+#play-game-game-section {
+    background-color: rgb(9, 0, 35);
+    color: rgb(183, 236, 253);
+    padding: 5% 30px 30px 14%;
+}
+
+#play-game-game-section hr {
+    height: 2px;
+    background: white;
+    opacity: 1;
+    width: 33%;
+}
+
+#play-game-game-section h1 {
+    color: rgb(255, 255, 255);
+    font-size: 40pt;
+}
+
+#play-game-game-section p {
+    color: white;
+    font-size: 1em;
+}
+
+#guess-section {
+    background: rgb(9, 0, 35);
+    color: white;
+    padding-top: 4%;
+    padding-right: 16%;
+}
+
+#currentPlayer {
+    font-size: 2vw;
+    margin-bottom: 30px;
+}
+
+#play-game-guess-button {
+    width: 30%;
+    margin-top: 20px;
+}
+
+#play-game-scoreboard {
+    margin-top: 50px;
+}
+
+#play-game-word-guess {
+    width: 80%;
+    margin-left: 10%;
+}
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style-type: none;
+    font-size: 1.7vw;
+}
+
+#buttons-section {
+    margin-top: 40px;
+}
+
+#buttons-section a {
+    display: block;
+    width: 30%;
+    padding: 10px 10px;
+    margin: 18px 0;
+}
+
+#auth-section {
+    background-color: rgb(255, 255, 255);
+    padding: 7% 5px;
+}
+
+#auth-section h1 {
+    font-size: 1.8vw;
+}
+
+.auth-bottom-text {
+    display: block;
+    font-size: 0.9vw;
+    margin-top: 50px;
+}
+
+#auth-section a {
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+#auth-section a:hover {
+    cursor: pointer;
+}
+
+#logo {
+    margin: 15px;
+    max-width: 35%;
+}
+
+#auth-form input {
+    width: 50%;
+    margin: 15px 25% 10px 25%; 
+    font-size: 1vw;
+}
+
+#auth-form button {
+    background-image: linear-gradient(to right, rgb(105, 200, 236) , rgb(168, 52, 231)); 
+    color: white;
+    border-radius: 500px;
+    font-size: 1em;
+    font-weight: 500;
+    width: 50%;
+    margin-top: 30px;
+}
+
+.input-message {
+    display: block;
+    font-size: 0.8vw;
+}
+
+/* Banner */
+.banner {
+    color: white;
+    background-color: rgb(9, 0, 35);
+}
+
+.back-arrow {
+    height: 2.5vw;
+    width: auto;
+    margin-right: 25px;
+    margin-top: 5px;
+}
+
+.banner-left-section {
+    margin: 30px 50px 0px 50px;
+}
+
+.banner-title {
+    font-size: 3.4vw;
+    display: inline;
+    margin-bottom: 0;
+}
+
+.banner-description {
+    margin-top: 20px;
+    margin-left: 58px;
+    font-size: 1vw;
+}
+
+.banner-links {
+    width: 40%;
+    margin-right: 50px;
+}
+
+.banner-links a {
+    margin: 3%;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2vw;
+}
+
+.banner-links a:hover {
+    color: #a6f3ff;
+}
+
+/* Leaderboards Page */
+.bigContainer {
+    height: 900px;
+    margin: 0;
+    padding: 0 5%;
+
+    background-color: rgb(9, 0, 35);
+}
+
+.bigContainer .banner {
+    margin-bottom: 40px;
+}
+
+.gameStatsContainer {
+    width: 27%;
+    height: 600px;
+    margin: 0 1.2%;
+    padding: 0;
+    
+    border-width: 0.3%;
+    border-style: solid;  
+    border-color: white;
+    background-color: rgb(207, 207, 207);
+
+    float: left;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.gameStatsContainer::-webkit-scrollbar {
+    width: 15px;
+}
+.gameStatsContainer::-webkit-scrollbar-track {
+    background: #505050;
+}
+.gameStatsContainer::-webkit-scrollbar-thumb {
+    background: #c2c2c2;
+}
+
+.gameTitle {
+    width: 23%;
+    height: 50px;
+
+    position: fixed;
+    /* background-color:rgb(5, 0, 20); */
+    background-color: rgb(9, 0, 35);
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+table.guessStats {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+
+    color: white;
+    /* background-color:rgb(5, 0, 20); */
+    background-color: rgb(9, 0, 35);
+}
+
+th{
+    padding-top: 60px;
+    width: 100%;
+    text-align: center;
+
+    font-size: 2em;
+}
+
+td {
+    width: 100%;
+    text-align: center;
+    padding: 10px 5px;
+
+    border-width: 0.5%;
+    border-style: solid;
+    border-left: none;
+    border-right: none;
+    border-color: white;
+    border-collapse: collapse;
+
+    font-size: 1.2em;
+}
+
+
+.guessName{
+    text-align: left;
+}
+
+.guessScore{
+    text-align: right;
+}
+
+.title {
+    width: 100%;
+    height: 90px;
+    padding: 30px 0;
+    margin: 0;
+
+    color: white;
+    font-size: 80px;
+    text-align: center;
+}
+
+.changeGame {
+    height: 600px;
+    padding-top: 250px;
+    width: 5%;
+    background-color: rgb(70, 70, 70);
+    float: left;
+
+    color: white;
+    text-align: center;
+    font-size: 80px;
+}
+
+
+/* Categories Page */
+
+.bigContainer#categories {
+    width: auto;
+    color: #fff;
+}
+
+.header-hr {
+    border: none;
+    height: 3px;
+    opacity: 1;
+    background-color: white;
+}
+
+.col {
+    float: left;
+    margin-right: 2%;
+    padding: 15px;
+    padding-top: 0;
+    height: 510px;
+}
+
+.col ol {
+    padding: 0;
+    font-size: 28px;
+}
+
+.col ol li {
+    padding: 2px;
+    list-style-position: inside
+}
+
+.col ol li.active {
+    background-color: white;
+    color: #060618;
+}
+
+.col ol li:hover {
+    background-color: #a6f3ff;
+    color: #060618;
+    cursor: pointer;
+}
+
+#areas-div {
+    margin-right: 0%;
+    padding-left: 0px;
+    width: 33%;
+    border-right: 2px solid #fff;
+}
+
+#categories-div {
+    width: 33%;
+    margin: auto;
+    border-right: 2px solid #fff;
+}
+
+#player-div {
+    padding-top: 015px;
+    position: relative;
+    border: 2px solid #fff;
+    width: 30%;
+}
+
+#player-div h4 {
+    padding: 8px;
+    border: 1px solid #fff;
+    font-size: 20px;
+}
+
+#games-div {
+    margin-right: 0%;
+    padding-right: 0px;
+    width: 33%;
+}
+
+#games-player-div {
+    padding-top: 015px;
+    margin-left: 3%;
+    position: relative;
+    border: 2px solid #fff;
+    width: 26%;
+}
+
+#games-player-div h4 {
+    padding: 8px;
+    border: 1px solid #fff;
+    font-size: 20px;
+}
+
+#description-div {
+    width: 33%;
+}
+
+#description-div h2 {
+    font-size: 30px;
+}
+
+#description-div h3 {
+    font-size: 20px;
+}
+
+.game-demo {
+    background-color: #fff;
+    color: #000;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.button-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 15px;
+}
+
+.button-wrapper button {
+    margin-bottom: 16px;
+    padding: 7px;
+    width: 100%;
+    background-color: #a6f3ff;
+}
+
+.button-wrapper button:hover {
+    background-color: #fff;
+}
+
+#misc-div {
+    width: 29%;
+    border-right: 2px solid #fff;
+}
+
+#misc-div button, #misc-div input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 15px;
+    font-size: 2.5vw;
+}
+
+#misc-div button:hover, #misc-div input:hover {
+    background-color: #a6f3ff;
+}
+
+#misc-div button a {
+    padding: 15px;
+    color: #060618;
+    text-decoration: none;
+}
+
+/* Create Page */
+
+.bigContainer#creatediv {
+    width: auto;
+    padding: 40px;
+    color: #fff;
+    overflow-y: scroll;
+}
+
+.bigContainer#creatediv h2 {
+    margin-top: 30px;
+}
+
+#createform  {
+    float: left;
+    width: 60%;
+    margin: 20px;
+}
+
+#createform input {
+    margin: 10px;
+}
+
+
+/* profile page */
+.userInformation {
+    padding: 0;
+    margin: 10px 0;
+    height: 50px;
+    width: 100%;
+    
+    background-color: rgb(9, 0, 35);
+    font-size: 2.2em;
+    text-align: left;
+    color: white;
+    float: left;
+}
+.leftContainer {
+    padding: 0;
+    margin: 0;
+    width: 50%;
+    float: left;
+}
+.rightContainer {
+    padding: 0;
+    padding-left: 5%;
+    margin: 0;
+    width: 45%;
+    float: right;
+}
+
+.left {
+    padding: 0;
+    margin: 0;
+    width: auto;
+    text-align: left;
+    float: left;
+}
+.right {
+    padding: 0;
+    margin: 0;
+    width: auto;
+    text-align: right;
+    float: right;
+}
+
+.profileContainer {
+    height: 300px;
+    width: 100%;
+
+    background-color: rgb(9, 0, 35);
+}
+
+.profilePicture {
+    margin: 20px 25px; 
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+    border-color: white;
+    border-style: solid;
+    border-width: 5px;
+
+    float: left;
+    overflow: hidden;
+}
+
+button.confirm {
+    width: 400px;
+    height: 95px;
+    margin: 20px 0;
+
+    font-size: 60px;
+    text-align: center;
+    background-color: rgb(0, 200, 255);
+}
+
+button.change {
+    width: 350px;
+    height: 95px;
+    margin: 20px 0 40px 0;
+
+    font-size: 60px;
+    text-align: center;
+    background-color: rgb(0, 200, 255);
+}
+
+#logout-button {
+    width: 350px;
+    height: 80px;
+    margin: 20px 0 40px 0;
+
+    font-size: 50px;
+    text-align: center;
+    background-color: rgb(197, 139, 255); 
+}
+
+.favoriteInfo{
+    width: 100%;
+    height: auto;
+
+    text-align: left;
+    font-size: 2em;
+    color: white;
+}
+
+.favoriteTitle {
+    /* padding: 30px 0 15px 0; */
+    margin-bottom: 15px;
+    width: 100%;
+    height: 50px;
+
+    text-align: left;
+    font-size: 2.2em;
+    color: white;
+    background-color: rgb(9, 0, 35);
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: linear-gradient(to right, rgb(105, 200, 236) , rgb(168, 52, 231)); 
+    background-color: linear-gradient(to right, rgb(105, 200, 236) , rgb(168, 52, 231)); 
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    color: black;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

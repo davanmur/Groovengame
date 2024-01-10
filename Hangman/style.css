@@ -1,0 +1,13 @@
+body {
+    font-family: 'joystix-monospace', sans-serif;
+    color: white;
+    background-color: rgb(9, 0, 35);
+}
+
+h1, h2, p {
+    font-family: inherit;
+}
+
+button {
+    font-family: inherit;
+}

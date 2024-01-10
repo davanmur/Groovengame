@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>GROOVE N' GAME</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link href="styles.css" rel="stylesheet">
+    <script src="GetTheLetter/GTL_demo_main.js" defer></script>
+    <script src="scripts/index.js" defer></script>
+</head>
+
+<body>
+    <div id="main-row" class="row">
+        <!-- Game Section -->
+        <div id="game-section">
+            <h1>Guess the Letter!</h1>
+            <h2 id="current-word">Loading...</h2>
+            <div class="row">
+                <label id="letters-guessed" for="word-guess">Letters guessed: </label>
+                <div class="col-6">
+                    <input type="text" class="form-control input-area" id="word-guess" name="word-guess" autofocus>
+                    <hr>
+                </div>
+                <div class="col-1">
+                    <button type="button" class="btn btn-primary" id="guessButton">Guess!</button>
+                </div>
+            </div>
+            <div id="guessMessage"></div>
+            <div id="buttons-section">
+                <a href="games.html" class="btn btn-primary">Try Out More Games!</a>
+                <a href="categories.php" class="btn btn-primary">Categories for Games</a>
+                <a href="stats.php" class="btn btn-secondary">Leaderboard</a>
+                <a href="profile.html" class="btn btn-secondary" id="profile-button">Profile</a>
+            </div>
+        </div>
+
+        <!-- Login Section -->
+        <div id="auth-section" class="col-4 text-center justify-content-center" hidden>
+            <h1>Groove N' Game</h1>
+            <img src="img/placeholder-logo.png" alt="Groove N' Game Logo" class="img-fluid" id="logo">
+            <form id="auth-form">
+                <span id="main-message" class="input-message" hidden></span>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                <span id="email-message" class="input-message" hidden>Account not found</span>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Username"
+                    autocomplete="username" hidden>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password"
+                    autocomplete="current-password" required>
+                <span id="password-message" class="input-message" hidden>Wrong password</span>
+                <button type="submit" class="btn" id="login-button">LOGIN</button>
+            </form>
+            <span class="auth-bottom-text">
+                <span>Don't have an account?</span> <a id="sign-up-link">Sign Up</a>
+            </span>
+        </div>
+    </div>
+</body>
+
+</html>
